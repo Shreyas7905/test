@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="factimetablestyles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+
+</head>
+    <body>
+        <nav class="navbar">
+            <a href="#" class="navbar-title">FACPortal</a>
+        <a class="nav-links" href="../myprofile/profile.html"alt="ADD FAC">My Profile</a>
+        <br>
+        <a class="nav-links"href="../facultylist/faclist.html"alt="ACTIVITY">Faculty List</a>
+        <br>
+        <a class="nav-links"href="../timetable/factimetable.html"alt="tt">Time Table</a>
+        <br>
+        <a class="nav-links"href="../activities/activity.html"alt="tt">Activities</a>
+        <br>
+        <a class="nav-links"href="../about/about.html"alt="about">About</a>
+         </nav>    
+    <div class="container">
+        <div class="notificationbar">
+            notification
+            </div>
+       
+    <h1>Timetables</h1>
+    <div class="button-container">
+        <button class="tab-button active" onclick="showTimetable('timetable-1', this)">Sem 1</button>
+        <button class="tab-button" onclick="showTimetable('timetable-2', this)">Sem 2</button>
+        <button class="tab-button" onclick="showTimetable('timetable-3', this)">Sem 3</button>
+        <button class="tab-button" onclick="showTimetable('timetable-4', this)">Sem 4</button>
+    </div>
+    <div class="button-container">
+        <button class="tab-button" onclick="showTimetable('timetable-5', this)">Sem 5</button>
+        <button class="tab-button" onclick="showTimetable('timetable-6', this)">Sem 6</button>
+        <button class="tab-button" onclick="showTimetable('timetable-7', this)">Sem 7</button>
+        <button class="tab-button" onclick="showTimetable('timetable-8', this)">Sem 8</button>
+    </div>
+
+    <div class="timetables">
+        <img id="timetable-1" class="timetable" src="../images/img1.jpg" alt="Timetable for Sem 1">
+        <img id="timetable-2" class="timetable" src="../images/img2.jpg" alt="Timetable for Sem 2">
+        <img id="timetable-3" class="timetable" src="../images/img3.jpg" alt="Timetable for Sem 3">
+        <img id="timetable-4" class="timetable" src="../images/img4.jpg" alt="Timetable for Sem 4">
+        <img id="timetable-5" class="timetable" src="../images/img5.jpg" alt="Timetable for Sem 5">
+        <img id="timetable-6" class="timetable" src="../images/img6.jpg" alt="Timetable for Sem 6">
+        <img id="timetable-7" class="timetable" src="../images/img7.jpg" alt="Timetable for Sem 7">
+        <img id="timetable-8" class="timetable" src="../images/img8.jpg" alt="Timetable for Sem 8">
+    </div>
+    <script>
+        function showTimetable(timetableId, button) {
+            var timetables = document.querySelectorAll('.timetable');
+            timetables.forEach(function(timetable) {
+                timetable.style.display = 'none';
+            });
+            var buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            var selectedTimetable = document.getElementById(timetableId);
+            if (selectedTimetable) {
+                selectedTimetable.style.display = 'block';
+            }
+            button.classList.add('active');
+        }
+    </script>
+    </body>
+    </html>

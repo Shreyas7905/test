@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="timetablestyles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+
+</head>
+<nav class="navbar">
+    <a href="#" class="navbar-title">FACPortal</a>
+<a class="nav-links" href="../managefaculty/managefac.html"alt="ADD FAC">Manage Faculty</a>
+<br>
+<a class="nav-links"href="../manageactivity/manageactivity.html"alt="ACTIVITY">Manage Activities</a>
+<br>
+<a class="nav-links"href="../timetable/timetable.html"alt="tt">Time Table</a>
+<br>
+<a class="nav-links"href="../about/about.html"alt="about">About</a>
+ </nav>
+    <body>        
+    <div class="container">
+        <div class="notificationbar">
+            notification
+            </div>
+       
+    <h1>Timetables</h1>
+    <div class="button-container">
+        <button class="tab-button active" onclick="showTimetable('timetable-1', this)">Sem 1</button>
+        <button class="tab-button" onclick="showTimetable('timetable-2', this)">Sem 2</button>
+        <button class="tab-button" onclick="showTimetable('timetable-3', this)">Sem 3</button>
+        <button class="tab-button" onclick="showTimetable('timetable-4', this)">Sem 4</button>
+    </div>
+    <div class="button-container">   
+        <button class="tab-button" onclick="showTimetable('timetable-5', this)">Sem 5</button>
+        <button class="tab-button" onclick="showTimetable('timetable-6', this)">Sem 6</button>
+        <button class="tab-button" onclick="showTimetable('timetable-7', this)">Sem 7</button>
+        <button class="tab-button" onclick="showTimetable('timetable-8', this)">Sem 8</button>
+    </div>
+
+    <div class="timetables">
+        <img id="timetable-1" class="timetable" src="../../faculty/images/img1.jpg" alt="Timetable for Sem 1">
+        <img id="timetable-2" class="timetable" src="../../faculty/images/img2.jpg" alt="Timetable for Sem 2">
+        <img id="timetable-3" class="timetable" src="../../faculty/images/img3.jpg" alt="Timetable for Sem 3">
+        <img id="timetable-4" class="timetable" src="../../faculty/images/img4.jpg" alt="Timetable for Sem 4">
+        <img id="timetable-5" class="timetable" src="../../faculty/images/img5.jpg" alt="Timetable for Sem 5">
+        <img id="timetable-6" class="timetable" src="../../faculty/images/img6.jpg" alt="Timetable for Sem 6">
+        <img id="timetable-7" class="timetable" src="../../faculty/images/img7.jpg" alt="Timetable for Sem 7">
+        <img id="timetable-8" class="timetable" src="../../faculty/images/img8.jpg" alt="Timetable for Sem 8">
+    </div>
+    <script>
+        function showTimetable(timetableId, button) {
+            var timetables = document.querySelectorAll('.timetable');
+            timetables.forEach(function(timetable) {
+                timetable.style.display = 'none';
+            });
+            var buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            var selectedTimetable = document.getElementById(timetableId);
+            if (selectedTimetable) {
+                selectedTimetable.style.display = 'block';
+            }
+            button.classList.add('active');
+        }
+    </script>
+    <div class="upload-section">
+        <h3>Upload New Timetable</h3>
+        <form action="/upload-timetable" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="semester">Select Semester</label>
+                <select id="semester" name="semester">
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                    <option value="4">Semester 4</option>
+                    <option value="5">Semester 5</option>
+                    <option value="6">Semester 6</option>
+                    <option value="7">Semester 7</option>
+                    <option value="8">Semester 8</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="timetableFile"class="file-upload-btn">Upload Timetable (PDF)</label>
+                <input type="file" id="timetableFile" class="file-upload-input"name="timetableFile" accept="application/pdf" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Upload Timetable</button>
+            </div>
+        </form>
+    </div>
+</div>
+    </body>
+    </html>

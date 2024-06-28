@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="loginstyles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Login</title>
+</head>
+<body>
+    <img src="login_faculty.jpg"height="400"
+    class="img1">
+   </div>
+    <h1>FACULTY LOGIN</h1>
+    <p> 
+    <form> 
+        <input type="text" placeholder="Enter username">
+    </form>
+    <form> <input type="text" placeholder="Enter password"></form>
+</p>
+<form action="../myprofile/profile.html" method="get">
+    <button type="submit">Login</button>
+</form>
+</body>
+<button onclick="admlogin()" class="option-btn">Admin Login</button>
+
+        <script>
+        function admlogin() {
+            window.location.href = '../../admin/login/login.html';
+        }
+        </script>
+</body>
+</html>

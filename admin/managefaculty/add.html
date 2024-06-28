@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <link rel="stylesheet" href="addstyles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Faculty</title>
+    
+</head>
+<body>
+    
+    <div class="content">
+       
+        <div class="notificationbar">
+        notification
+        </div>
+
+    
+    <div class="form">
+       <div id="back"> <a href ="managefac.html"><img src="../images/backbutton.png"width="50"height="50"alt="back"></a></div>
+        <h1>Add Faculty</h1>
+    </div>
+    <h3>Faculty Name</h3>
+    <form><input type="text"placeholder="Enter faculty name">
+    </form>
+    <h3>Faculty Designation</h3>
+    <form><input type="text" placeholder="Enter designation"></form>
+    <h3>Faculty Qualificaion</h3>
+    <form><input type="text" placeholder="Enter faculty qualification"></form>
+    <h3>Faculty Email ID</h3>
+    <form><input type="email" placeholder="Enter faculty email id"></form>
+    <h3>Faculty Mobile Number</h3>
+    <form><input type="tel" placeholder="Enter faculty phone number"></form>
+    <h3>Faculty Photo</h3>    
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file-upload" class="file-upload-btn">Upload Photo</label>
+        <input id="file-upload" class="file-upload-input" type="file" name="image" accept="image/*">
+    </form>
+    <form><button type="submit">Submit</button> </form>
+
+
+</div>
+</div>
+
+
+
+</body>
+</html>

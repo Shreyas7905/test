@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="activitystyles.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Activities</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-title">FACPortal</a>
+    <a class="nav-links" href="../myprofile/profile.html"alt="ADD FAC">My Profile</a>
+    <br>
+    <a class="nav-links"href="../facultylist/faclist.html"alt="ACTIVITY">Faculty List</a>
+    <br>
+    <a class="nav-links"href="../timetable/factimetable.html"alt="tt">Time Table</a>
+    <br>
+    <a class="nav-links"href="../activities/activity.html"alt="tt">Activities</a>
+    <br>
+    <a class="nav-links"href="../about/about.html"alt="about">About</a>
+     </nav>
+    <h1>Department Activities</h1>
+    <form action="" method="get">
+        <div>
+            <label for="facultyActivity">Select Activity</label>
+            <select id="facultyActivity" name="facultyActivity">
+                <option value="Activity1">FDP-Attended</option>
+                <option value="Activity2">FDP-Organized</option>
+                <option value="Activity3">Workshop-Attended</option>
+                <option value="Activity4">Workshop-Organized</option>
+                <option value="Activity5">Hackathons-Organized</option>
+                <option value="Activity6">Guest Lectures-organized</option>
+                <option value="Activity7">Journal Publications</option>
+                <option value="Activity8">Conference Publications</option>
+                <option value="Activity9">Faculty Achievements</option>
+                <option value="Activity10">As Resource Person</option>
+            </select>
+        </div>
+        <div>
+            <label for="year">Select Year</label>
+            <select id="year" name="year">
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">View Activities</button>
+        </div>
+    </form>
+    <div class="form-group">
+        <label for="timetableFile"class="file-upload-btn">Upload Report (PDF)</label>
+        <input type="file" id="timetableFile" class="file-upload-input"name="timetableFile" accept="application/pdf" required>
+    </div>
+        <button type="submit">Add Report</button>
+        <button type="submit">Download Report</button>
+    <div id="contentArea">
+        
+
+    </div>
+</body>
+</html>

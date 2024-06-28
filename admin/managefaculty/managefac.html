@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="managestyles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Manage Faculty</h1>
+    
+</head>
+<nav class="navbar">
+    <a href="#" class="navbar-title">FACPortal</a>
+<a class="nav-links" href="../managefaculty/managefac.html"alt="ADD FAC">Manage Faculty</a>
+<br>
+<a class="nav-links"href="../manageactivity/manageactivity.html"alt="ACTIVITY">Manage Activities</a>
+<br>
+<a class="nav-links"href="../timetable/timetable.html"alt="tt">Time Table</a>
+<br>
+<a class="nav-links"href="../about/about.html"alt="about">About</a>
+ </nav>
+<body>
+    
+    
+    <div class="content">
+       
+        <div class="notificationbar">
+        notification
+        </div>
+
+        
+    <div class="container">
+        
+        <h2>Select year </h2>
+        <select id="year" name="year">
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+        </select>
+        <div class="form">
+            <div id="back"> <a href ="../managefaculty/profile.html"><img src="../../faculty/login/login_faculty.jpg"alt="faculty"></a></div>
+    </div>
+    </div>
+        <button onclick="add()">Add Faculty</button>
+
+        <script>
+        function add() {
+            window.location.href = 'add.html';
+        }
+        </script>
+</body>
+</html>
